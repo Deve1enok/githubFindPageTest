@@ -9,16 +9,16 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 
-public class findPageSoft {
+public class FindPageSoftTest {
     @BeforeAll
-    static void beforeALL() {
+    static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 6000;
         Configuration.pageLoadStrategy = "eager";
 
     }
     @Test
-    void findPage() {
+    void findPageTest() {
         open("https://github.com/");
         $(".search-input").click();
         $("#query-builder-test").setValue("Selenide").pressEnter();
