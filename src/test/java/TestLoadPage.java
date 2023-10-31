@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class testLoadPage {
+public class TestLoadPage {
     @BeforeAll
     static void beforeALL() {
         Configuration.browserSize = "1920x1080";
@@ -16,7 +16,7 @@ public class testLoadPage {
     }
 
     @Test
-    void testPageGitH() {
+    void testPageGitHTest() {
         open("https://github.com/");
         $("ul.d-lg-flex.list-style-none").$(byText("Solutions")).hover();
         $("[href='/enterprise']").click();
