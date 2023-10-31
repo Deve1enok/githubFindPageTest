@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class testDragAndDropApp {
+public class TestDragAndDropApp {
     @BeforeAll
     static void beforeALL() {
         Configuration.browserSize = "1920x1080";
@@ -16,7 +16,7 @@ public class testDragAndDropApp {
         Configuration.pageLoadStrategy = "eager";
     }
      @Test
-    void testHmDragDrop () {
+    void testHmDragDropTest () {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         actions().moveToElement($("#column-a")).clickAndHold().moveByOffset(200,0).release().perform();
         $("#column-a").shouldHave(text("B"));
